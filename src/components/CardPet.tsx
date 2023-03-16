@@ -2,10 +2,10 @@ import { Box, Image, Text, Button, IButtonProps } from 'native-base'
 import { Dimensions, ImageSourcePropType } from 'react-native'
 
 type Props = IButtonProps & {
-  source: ImageSourcePropType
+  picture: ImageSourcePropType
 }
 
-export function CardPet({ source, ...rest }: Props) {
+export function CardPet({ picture, ...rest }: Props) {
 
   const screenWidth = Dimensions.get('window').width
   const itemWidth = screenWidth / 3;
@@ -20,7 +20,7 @@ export function CardPet({ source, ...rest }: Props) {
         {...rest} 
       >
         <Image
-          source={source}
+          source={picture}
           alt="imagem"
           w={itemWidth}
           h={itemWidth}
